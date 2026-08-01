@@ -9,7 +9,7 @@ markdown itself.
 
 ```bash
 python3 -c "import json;json.load(open('plugin/.claude-plugin/plugin.json'))"  # manifest valid
-grep -rn "relex.you/api" plugin/ | head   # endpoints must match the live MCP surface
+grep -rn "relex.legal/api" plugin/ | head   # endpoints must match the live MCP surface
 ```
 
 ## Non-negotiables

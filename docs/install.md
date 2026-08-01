@@ -44,7 +44,7 @@ browser via secure deep links.
 
 ## Claude Desktop / claude.ai
 
-**MCP URL:** `https://relex.you/api/mcp`
+**MCP URL:** `https://relex.legal/api/mcp`
 
 How you add it depends on your plan — and **on every plan you finish by clicking
 Connect**:
@@ -70,7 +70,7 @@ Other agents use the same MCP server with different packaging:
 
 ## OpenAI Codex
 
-Add an MCP server pointing at `https://relex.you/api/mcp`. Codex clients that
+Add an MCP server pointing at `https://relex.legal/api/mcp`. Codex clients that
 don't drive OAuth use the **API-key fallback** below. See `connect-codex.md`.
 
 ## Fallback — connect with an API key (CI / headless / no-OAuth clients)
@@ -79,7 +79,7 @@ don't drive OAuth use the **API-key fallback** below. See `connect-codex.md`.
 2. Add the server with the key as a bearer token:
 
    ```bash
-   claude mcp add --transport http relex https://relex.you/api/mcp \
+   claude mcp add --transport http relex https://relex.legal/api/mcp \
      --header "Authorization: Bearer rlx_..."
    ```
 

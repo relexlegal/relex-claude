@@ -17,7 +17,7 @@ Relex API is. `search({query,tag,method})` discovers endpoints from the OpenAPI
 spec; `execute({method,path,query,body})` calls one — the server validates it
 against the spec, applies the PII guard, and runs it with the user's auth.
 
-That MCP server is **served by the Relex backend** at `https://relex.you/api/mcp`
+That MCP server is **served by the Relex backend** at `https://relex.legal/api/mcp`
 (the SvelteKit `/api/*` proxy forwards `/api/mcp` → backend `/v1/mcp`). Auth is a
 **browser sign-in over OAuth 2.1 + PKCE**: on the first tool call the server
 returns an RFC 9728 challenge, the client opens the user's browser to sign in
@@ -40,7 +40,7 @@ not by convention.
 relex-claude/
 ├── plugin/                     Claude Code plugin "relex-legal"
 │   ├── .claude-plugin/plugin.json
-│   ├── .mcp.json                Remote MCP connector (https://relex.you/api/mcp; OAuth sign-in)
+│   ├── .mcp.json                Remote MCP connector (https://relex.legal/api/mcp; OAuth sign-in)
 │   ├── commands/                /relex-setup (guided onboarding) + /relex-connect
 │   ├── skills/
 │   │   ├── relex/               Drive Relex over MCP + PII discipline (auto-loaded)
@@ -108,7 +108,7 @@ repo is just the plugin + docs.
 ### Claude desktop / Team note
 
 On **Pro / Max** you add the custom connector yourself
-(`https://relex.you/api/mcp`). On **Team / Enterprise** an **owner or admin**
+(`https://relex.legal/api/mcp`). On **Team / Enterprise** an **owner or admin**
 adds it once in the organisation’s Connectors settings; each member only opens
 **Customize → Connectors**, finds Relex already listed, and clicks **Connect**.
 Details: [`docs/connect-claude-desktop.md`](docs/connect-claude-desktop.md).

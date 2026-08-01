@@ -1,6 +1,6 @@
 # Connect Relex to Claude Code
 
-The Relex MCP server is served by the Relex backend at `https://relex.you/api/mcp`.
+The Relex MCP server is served by the Relex backend at `https://relex.legal/api/mcp`.
 The default auth is a **browser sign-in over OAuth** — no key to paste. A static
 API key works as a CI/headless fallback (Option C).
 
@@ -26,7 +26,7 @@ parties, and first case (the `/relex-setup` flow).
 ## Option B — add the MCP server directly (OAuth)
 
 ```bash
-claude mcp add --transport http relex https://relex.you/api/mcp
+claude mcp add --transport http relex https://relex.legal/api/mcp
 ```
 
 No `--header`: on first use, Claude Code discovers the OAuth authorization server
@@ -37,7 +37,7 @@ No `--header`: on first use, Claude Code discovers the OAuth authorization serve
 In Relex, **Settings → API Keys → Create key** (shown once), then:
 
 ```bash
-claude mcp add --transport http relex https://relex.you/api/mcp \
+claude mcp add --transport http relex https://relex.legal/api/mcp \
   --header "Authorization: Bearer rlx_..."
 ```
 

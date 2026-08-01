@@ -1,7 +1,7 @@
 # Connect Relex to OpenAI Codex
 
 Codex connects to Relex over the same remote MCP server, served by the Relex
-backend at `https://relex.you/api/mcp`. Codex clients that support MCP OAuth use
+backend at `https://relex.legal/api/mcp`. Codex clients that support MCP OAuth use
 the browser sign-in automatically; otherwise use the **Relex API key** as a
 bearer token (below).
 
@@ -22,7 +22,7 @@ export RELEX_API_KEY="rlx_sk_..."
 
 ```toml
 [mcp_servers.relex]
-url = "https://relex.you/api/mcp"
+url = "https://relex.legal/api/mcp"
 bearer_token_env_var = "RELEX_API_KEY"
 ```
 

@@ -7,7 +7,7 @@ key to paste. A static API key works as a fallback (see the end).
 **MCP URL:**
 
 ```
-https://relex.you/api/mcp
+https://relex.legal/api/mcp
 ```
 
 ## Which plan do you have?
@@ -30,7 +30,7 @@ managed plan — ask your admin.
 2. Click **Add custom connector**.
 3. Name it **Relex**. Paste the MCP URL:
    ```
-   https://relex.you/api/mcp
+   https://relex.legal/api/mcp
    ```
    Leave OAuth client id/secret blank unless instructed otherwise.
 4. Save, then click **Connect**. Your browser opens to sign in to Relex with
@@ -50,7 +50,7 @@ Then say: *"set up my practice workflow with Relex"*.
    not only your personal Customize menu).
 3. **Add custom connector**:
    - Name: **Relex**
-   - URL: `https://relex.you/api/mcp`
+   - URL: `https://relex.legal/api/mcp`
 4. Save and make it available to members (publish / enable per your Claude org UI).
 5. Tell the team: *“Relex is under Customize → Connectors — click Connect and
    sign into your Relex account.”*

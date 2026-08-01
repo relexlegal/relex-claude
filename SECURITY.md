@@ -7,7 +7,7 @@ client PII to the model**. This document describes the security posture of the
 ## Authentication
 
 - The plugin connects to the hosted Relex MCP server at
-  `https://relex.you/api/mcp`. On first use it performs a **browser sign-in over
+  `https://relex.legal/api/mcp`. On first use it performs a **browser sign-in over
   OAuth 2.1 with PKCE** (Google or Apple) — you authenticate to your own Relex
   account; **there is no key to paste**.
 - The access token issued to the agent is a per-connection credential scoped to
@@ -42,5 +42,5 @@ client PII to the model**. This document describes the security posture of the
 
 ## Reporting a vulnerability
 
-Please report security issues privately to **security@relex.you**. Do not open a
+Please report security issues privately to **security@relex.legal**. Do not open a
 public issue for a suspected vulnerability.

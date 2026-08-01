@@ -4,7 +4,7 @@ Claude can join your Slack workspace as a teammate: tag **@Claude** in a channel
 and it works there with the tools your admins connect, keeping a per-channel
 memory. Connected to Relex, it can read, reason about, and draft on your legal
 matters — while every client identity stays sealed. This is the same Relex MCP
-server (`https://relex.you/api/mcp`) the other surfaces use; only the connection
+server (`https://relex.legal/api/mcp`) the other surfaces use; only the connection
 point differs.
 
 > Availability: Claude in Slack is an Anthropic **Team/Enterprise** capability and
@@ -16,7 +16,7 @@ point differs.
 In your Claude organization's admin/connector settings, add a **custom MCP
 connector**:
 
-- **URL:** `https://relex.you/api/mcp`
+- **URL:** `https://relex.legal/api/mcp`
 - **Auth:** leave client id/secret blank — Relex uses **OAuth on connect**. When
   you authorize, your browser opens to sign in to Relex (Google or Apple) and
   approve; no API key to paste. The connection then acts as **you** (the admin who
@@ -33,7 +33,7 @@ or per practice group. Start with a **private test channel** before a live matte
 So Claude knows which matter a channel is about, put the case deep link where it
 can find it:
 
-- Pin the case link (`https://relex.you/dashboard/cases/{caseId}`) in the channel,
+- Pin the case link (`https://relex.legal/dashboard/cases/{caseId}`) in the channel,
   or add it to the channel topic.
 - The first time you tag @Claude, confirm the case once ("Working on «Acme
   dispute»?"). Claude keeps that binding in the channel's memory.
