@@ -10,7 +10,7 @@ The `relex-legal` plugin bundles the connector, the workflow skill, the
 `/relex-setup` and `/relex-connect` commands, and an onboarding agent.
 
 ```
-/plugin marketplace add relexyou/relex-claude
+/plugin marketplace add relexlegal/relex-claude
 /plugin install relex-legal@relex
 ```
 

@@ -94,7 +94,7 @@ repo is just the plugin + docs.
 
 ## Quick start
 
-1. `/plugin marketplace add relexyou/relex-claude` then `/plugin install relex-legal@relex`.
+1. `/plugin marketplace add relexlegal/relex-claude` then `/plugin install relex-legal@relex`.
 2. Say *"set up my practice workflow with Relex"* — sign in in the browser (no key
    paste); Claude walks you through PII password → knowledge → auto-created
    encrypted parties → first case. Full guide:
@@ -116,7 +116,7 @@ Details: [`docs/connect-claude-desktop.md`](docs/connect-claude-desktop.md).
 ### Other agents
 
 Same MCP server, different packaging:
-[relex-gpt](https://github.com/relexyou/relex-gpt) ·
-[relex-grok](https://github.com/relexyou/relex-grok) ·
-[relex-gemini](https://github.com/relexyou/relex-gemini) ·
-[relex-mcp](https://github.com/relexyou/relex-mcp) (generic).
+[relex-gpt](https://github.com/relexlegal/relex-gpt) ·
+[relex-grok](https://github.com/relexlegal/relex-grok) ·
+[relex-gemini](https://github.com/relexlegal/relex-gemini) ·
+[relex-mcp](https://github.com/relexlegal/relex-mcp) (generic).

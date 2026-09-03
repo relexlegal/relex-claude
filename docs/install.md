@@ -10,7 +10,7 @@ clients' names, IDs, and documents stay encrypted in your browser.
 1. **Add the Relex marketplace** (one time):
 
    ```
-   /plugin marketplace add relexyou/relex-claude
+   /plugin marketplace add relexlegal/relex-claude
    ```
 
 2. **Install the plugin:**
@@ -63,10 +63,10 @@ practice workflow with Relex"* as above. Full walkthrough:
 [`connect-claude-desktop.md`](connect-claude-desktop.md).
 
 Other agents use the same MCP server with different packaging:
-[GPT](https://github.com/relexyou/relex-gpt) ·
-[Grok](https://github.com/relexyou/relex-grok) ·
-[Gemini](https://github.com/relexyou/relex-gemini) ·
-[generic MCP](https://github.com/relexyou/relex-mcp).
+[GPT](https://github.com/relexlegal/relex-gpt) ·
+[Grok](https://github.com/relexlegal/relex-grok) ·
+[Gemini](https://github.com/relexlegal/relex-gemini) ·
+[generic MCP](https://github.com/relexlegal/relex-mcp).
 
 ## OpenAI Codex
 

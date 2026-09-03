@@ -15,7 +15,7 @@
       "category": "legal",
       "keywords": ["legal", "case-management", "pii", "claude", "ontology", "end-to-end", "sealed"],
       "homepage": "https://relex.legal/docs/mcp",
-      "repository": "https://github.com/relexyou/relex-claude"
+      "repository": "https://github.com/relexlegal/relex-claude"
     }
   ]
 }
