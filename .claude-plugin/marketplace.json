@@ -4,14 +4,14 @@
     "name": "Relex"
   },
   "metadata": {
-    "description": "Relex — use Claude on your legal matters without ever exposing client PII.",
-    "version": "0.2.10"
+    "description": "Relex \u2014 use Claude on your legal matters without ever exposing client PII.",
+    "version": "0.2.13"
   },
   "plugins": [
     {
       "name": "relex-legal",
       "source": "./plugin",
-      "description": "Drive your Relex legal cases from Claude — read, reason, draft, and record over a PII-safe API. Clients' names and IDs are sealed with a key only the user holds, and document content is redacted client-side; Claude only ever works with de-identified labels.",
+      "description": "Drive your Relex legal cases from Claude \u2014 read, reason, draft, and record over a PII-safe API. Clients' names and IDs are sealed with a key only the user holds, and document content is redacted client-side; Claude only ever works with de-identified labels.",
       "category": "legal",
       "keywords": [
         "legal",

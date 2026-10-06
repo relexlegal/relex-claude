@@ -40,9 +40,7 @@ Connector Library listing or approval. Check the current
 [portable-context guide](https://relex.legal/guides/portable-legal-context).
 ## How it works
 
-Claude connects to a **remote MCP server** that exposes exactly two tools —
-`search` and `execute` — with a fixed ~1k-token cost no matter how large the
-Relex API is. `search({query,tag,method})` discovers endpoints from the OpenAPI
+Claude connects to a **remote MCP server** that exposes eleven tools over Streamable HTTP (matter workflows plus generic `search` / `execute`). `search({query,tag,method})` discovers endpoints from the OpenAPI
 spec; `execute({method,path,query,body})` calls one — the server validates it
 against the spec, applies the PII guard, and runs it with the user's auth.
 
@@ -62,6 +60,18 @@ Claude never receives it either way. On top of that, `execute` **refuses** any
 call that would return party or document plaintext and instead hands the user a
 **deep link** to do it securely in the Relex UI — enforced at the API boundary,
 not by convention.
+
+
+## MCP tools (remote server)
+
+The hosted connector at `https://relex.legal/api/mcp` exposes **eleven** tools:
+`list_matters`, `read_matter_context`, `diagnose_matter_sources`,
+`save_matter_work_product`, `correct_matter_ontology`, `conclude_matter_session`,
+`find_legal_professionals`, `read_legal_professional`, `prepare_professional_request`,
+`search`, and `execute`. Auth is OAuth 2.1 + PKCE; connector scopes are
+`relex.cases.read relex.cases.write relex.draft`.
+
+Claude.ai / Claude desktop callback: `https://claude.ai/api/mcp/auth_callback` (also claude.com). Claude Code uses loopback `http://localhost/callback` / `http://127.0.0.1/callback` (any port).
 
 ## Layout
 
