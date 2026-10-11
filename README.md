@@ -40,7 +40,7 @@ Connector Library listing or approval. Check the current
 [portable-context guide](https://relex.legal/guides/portable-legal-context).
 ## How it works
 
-Claude connects to a **remote MCP server** that exposes eleven tools over Streamable HTTP (matter workflows plus generic `search` / `execute`). `search({query,tag,method})` discovers endpoints from the OpenAPI
+Claude connects to a **remote MCP server** that exposes twelve tools over Streamable HTTP (matter workflows plus generic `search` / `execute`). `search({query,tag,method})` discovers endpoints from the OpenAPI
 spec; `execute({method,path,query,body})` calls one — the server validates it
 against the spec, applies the PII guard, and runs it with the user's auth.
 
@@ -64,8 +64,8 @@ not by convention.
 
 ## MCP tools (remote server)
 
-The hosted connector at `https://relex.legal/api/mcp` exposes **eleven** tools:
-`list_matters`, `read_matter_context`, `diagnose_matter_sources`,
+The hosted connector at `https://relex.legal/api/mcp` exposes **twelve** tools:
+`list_matters`, `read_matter_context`, `read_matter_source`, `diagnose_matter_sources`,
 `save_matter_work_product`, `correct_matter_ontology`, `conclude_matter_session`,
 `find_legal_professionals`, `read_legal_professional`, `prepare_professional_request`,
 `search`, and `execute`. Auth is OAuth 2.1 + PKCE; connector scopes are
