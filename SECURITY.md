@@ -38,7 +38,7 @@ client PII to the model**. This document describes the security posture of the
 
 - The plugin ships **no credentials or secrets**. It only declares the public
   MCP endpoint; you authenticate yourself at runtime.
-- The MCP tools (`search`, `execute`), descriptor validation, and the PII guard
+- The MCP tools (`search`, `read_api`, `execute`), descriptor validation, and the PII guard
   run server-side in the Relex backend, not in this repo.
 
 ## Reporting a vulnerability

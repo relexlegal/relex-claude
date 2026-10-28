@@ -33,14 +33,16 @@ directly — see Codex's MCP docs for the current field names.
 
 ## Tools
 
-You get twelve tools: ten matter tools (`list_matters`, `read_matter_context`,
+You get thirteen tools: ten matter tools (`list_matters`, `read_matter_context`,
 `diagnose_matter_sources`, `read_matter_source`, `save_matter_work_product`,
 `correct_matter_ontology`, `conclude_matter_session`, `find_legal_professionals`,
 `read_legal_professional`, `prepare_professional_request`) plus:
 
 - `search({ query, tag?, method? })` — discover Relex API endpoints from the spec.
-- `execute({ method, path, query?, body? })` — call one endpoint via a plain descriptor
-  (validated server-side, PII-guarded), running with your auth.
+- `read_api({ path, query? })` — read one endpoint (GET only, read-only; validated
+  server-side, PII-guarded), running with your auth.
+- `execute({ method, path, query?, body? })` — create, update or delete through one
+  endpoint (POST/PUT/PATCH/DELETE; validated server-side, PII-guarded), running with your auth.
 
 Ask Codex to "start a Relex case" to confirm. Client personal data, documents,
 payments and exports are handled in the browser via deep links — the connector
