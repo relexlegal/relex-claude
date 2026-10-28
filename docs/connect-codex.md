@@ -33,7 +33,10 @@ directly — see Codex's MCP docs for the current field names.
 
 ## Tools
 
-You get exactly two tools:
+You get twelve tools: ten matter tools (`list_matters`, `read_matter_context`,
+`diagnose_matter_sources`, `read_matter_source`, `save_matter_work_product`,
+`correct_matter_ontology`, `conclude_matter_session`, `find_legal_professionals`,
+`read_legal_professional`, `prepare_professional_request`) plus:
 
 - `search({ query, tag?, method? })` — discover Relex API endpoints from the spec.
 - `execute({ method, path, query?, body? })` — call one endpoint via a plain descriptor

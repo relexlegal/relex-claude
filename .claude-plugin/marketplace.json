@@ -4,14 +4,14 @@
     "name": "Relex"
   },
   "metadata": {
-    "description": "Relex \u2014 use Claude on your legal matters without ever exposing client PII.",
-    "version": "0.2.13"
+    "description": "Relex legal practice management — use Claude on your legal matters without exposing client PII.",
+    "version": "0.2.14"
   },
   "plugins": [
     {
       "name": "relex-legal",
       "source": "./plugin",
-      "description": "Drive your Relex legal cases from Claude \u2014 read, reason, draft, and record over a PII-safe API. Clients' names and IDs are sealed with a key only the user holds, and document content is redacted client-side; Claude only ever works with de-identified labels.",
+      "description": "Relex legal practice management for Claude: work on your Relex matters over a PII-safe MCP connector (twelve tools: ten matter tools plus search and execute). Party identities are sealed with a key only the user holds, documents are read and redacted by the Relex Private Model, and the assistant works with de-identified labels.",
       "category": "legal",
       "keywords": [
         "legal",
