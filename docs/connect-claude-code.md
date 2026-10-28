@@ -44,8 +44,8 @@ claude mcp add --transport http relex https://relex.legal/api/mcp \
 ## Verify
 
 ```
-/mcp        # shows `relex` connected, with tools: search, execute
+/mcp        # shows `relex` connected, with tools: search, read_api, execute
 ```
 
 Then ask Claude to "set up my practice workflow with Relex" or "start a Relex
-case" — it should call `search` then `execute`.
+case" — it should call `search`, then `read_api` or `execute`.

@@ -31,8 +31,8 @@ Relex helps you use Claude end-to-end by:
 The integration is deliberately PII-safe by construction: party data is
 encrypted client-side so the server has no way to decrypt it, document content
 is read and redacted by the Relex Private Model on Relex servers by default,
-and Claude talks to Relex through a twelve-tool MCP server (ten matter tools
-plus `search` / `execute`) whose `execute` step additionally refuses any
+and Claude talks to Relex through a thirteen-tool MCP server (ten matter tools
+plus `search` / `read_api` / `execute`) whose `read_api` and `execute` steps additionally refuse any
 call that would return party or document plaintext, handing the user a secure
 browser deep link instead. Safety isn't a policy you have to remember — the
 strongest layer of it is cryptographic, and the rest is enforced at the API

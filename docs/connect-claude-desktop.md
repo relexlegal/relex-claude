@@ -35,7 +35,7 @@ managed plan — ask your admin.
    Leave OAuth client id/secret blank unless instructed otherwise.
 4. Save, then click **Connect**. Your browser opens to sign in to Relex with
    Google/Apple and approve — **no key paste**.
-5. The connector shows **Connected** with tools `search` and `execute`.
+5. The connector shows **Connected** with tools `search`, `read_api` and `execute`.
 
 Then say: *"set up my practice workflow with Relex"*.
 

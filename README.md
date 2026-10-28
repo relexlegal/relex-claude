@@ -40,8 +40,9 @@ Connector Library listing or approval. Check the current
 [portable-context guide](https://relex.legal/guides/portable-legal-context).
 ## How it works
 
-Claude connects to a **remote MCP server** that exposes twelve tools over Streamable HTTP (matter workflows plus generic `search` / `execute`). `search({query,tag,method})` discovers endpoints from the OpenAPI
-spec; `execute({method,path,query,body})` calls one — the server validates it
+Claude connects to a **remote MCP server** that exposes thirteen tools over Streamable HTTP (matter workflows plus generic `search` / `read_api` / `execute`). `search({query,tag,method})` discovers endpoints from the OpenAPI
+spec; `read_api({path,query})` reads one GET endpoint and `execute({method,path,query,body})`
+creates, updates or deletes through one — the server validates each call
 against the spec, applies the PII guard, and runs it with the user's auth.
 
 That MCP server is **served by the Relex backend** at `https://relex.legal/api/mcp`
@@ -57,7 +58,7 @@ from the user's PII password; the server stores only ciphertext and **cannot
 decrypt it under any circumstance** — a cryptographic guarantee, not a policy
 choice. Document content is read and redacted by the Relex Private Model on Relex
 servers by default (browser reading mode keeps it on the device); Claude only
-ever receives redacted source text. On top of that, `execute` **refuses** any
+ever receives redacted source text. On top of that, `read_api` and `execute` **refuse** any
 call that would return party or document plaintext and instead hands the user a
 **deep link** to do it securely in the Relex UI — enforced at the API boundary,
 not by convention.
@@ -65,11 +66,11 @@ not by convention.
 
 ## MCP tools (remote server)
 
-The hosted connector at `https://relex.legal/api/mcp` exposes **twelve** tools:
+The hosted connector at `https://relex.legal/api/mcp` exposes **thirteen** tools:
 `list_matters`, `read_matter_context`, `read_matter_source`, `diagnose_matter_sources`,
 `save_matter_work_product`, `correct_matter_ontology`, `conclude_matter_session`,
 `find_legal_professionals`, `read_legal_professional`, `prepare_professional_request`,
-`search`, and `execute`. Auth is OAuth 2.1 + PKCE; connector scopes are
+`search`, `read_api`, and `execute`. Auth is OAuth 2.1 + PKCE; connector scopes are
 `relex.cases.read relex.cases.write relex.draft`.
 
 Claude.ai / Claude desktop callback: `https://claude.ai/api/mcp/auth_callback` (also claude.com). Claude Code uses loopback `http://localhost/callback` / `http://127.0.0.1/callback` (any port).
@@ -128,7 +129,7 @@ sources, compliance limits, method and limitation heuristics per system. Designe
 to run **hand-in-hand** with Anthropic's `claude-for-legal` (generic drafting
 playbooks) — Relex adds the confidential workspace + grounding.
 
-The MCP handler itself (the `search`/`execute` tools, descriptor validation, and
+The MCP handler itself (the `search`/`read_api`/`execute` tools, descriptor validation, and
 the PII guard) lives in the **Relex backend** (`/v1/mcp`), not in this repo. This
 repo is just the plugin + docs.
 
