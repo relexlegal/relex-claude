@@ -92,8 +92,9 @@ OAuth connection also ends its sign-in session) or unpair clients in
 - Claude signs in to **your** Relex account; every call runs as you.
 - Client PII — names, national IDs, contacts — is sealed client-side under your
   PII password; the server stores only ciphertext and cannot decrypt it under
-  any circumstance. Document content is redacted client-side before upload by
-  default.
+  any circumstance. Document content is read and redacted by the
+  Relex Private Model on Relex servers by default (browser reading mode keeps
+  it on your device); the connector only returns redacted source text.
 - The API additionally refuses any call that would return party or document
   plaintext and hands back a browser deep link instead. Claude works with
   de-identified labels (`[Party 1]`) and anonymized counts.

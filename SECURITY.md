@@ -23,8 +23,9 @@ client PII to the model**. This document describes the security posture of the
   with a key derived from your PII password. The server stores only ciphertext
   and **cannot decrypt it under any circumstance**: this is a cryptographic
   guarantee, not a policy choice. Your password never leaves your browser.
-- Document content is redacted client-side before upload by default. Claude
-  never receives document content either way.
+- Document content is read and redacted by the Relex Private Model on Relex
+  servers by default (browser reading mode keeps it on your device). Claude
+  only receives redacted source text, never the original document.
 - The MCP server's agent-facing API additionally **blocks** any endpoint that
   would return party or document plaintext (party reads/writes,
   document/attachment content, uploads) and instead returns a deep link so you

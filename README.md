@@ -55,8 +55,9 @@ CI/headless fallback. No separate service and no DNS to provision.
 Party data — names, IDs, contacts — is **sealed client-side** with a key derived
 from the user's PII password; the server stores only ciphertext and **cannot
 decrypt it under any circumstance** — a cryptographic guarantee, not a policy
-choice. Document content is redacted client-side before upload by default, so
-Claude never receives it either way. On top of that, `execute` **refuses** any
+choice. Document content is read and redacted by the Relex Private Model on Relex
+servers by default (browser reading mode keeps it on the device); Claude only
+ever receives redacted source text. On top of that, `execute` **refuses** any
 call that would return party or document plaintext and instead hands the user a
 **deep link** to do it securely in the Relex UI — enforced at the API boundary,
 not by convention.
