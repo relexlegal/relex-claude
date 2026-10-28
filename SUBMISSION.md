@@ -22,7 +22,9 @@ PKCE and dynamic client registration). Twelve tools: `list_matters`,
 ## User must do
 - [ ] Review and deploy the backend branch (`backend/terraform/deploy.sh prod`), then check `initialize` returns the new instructions.
 - [ ] Merge and push this branch to `main` on github.com/relexlegal/relex-claude.
-- [ ] Resolve every `[CONFIRM WITH GEORGE]` in the listing copy (models, guest AI disclosure, lawyer review) and update the privacy policy (draft: `backend/docs/privacy-policy-ai-draft.md`).
+- [x] Listing copy: models verified from `terraform/envs/prod.tfvars`; lawyer review described as optional (validatedGenerations, mark-delivered). Only Vertex AI naming is still `[CONFIRM WITH GEORGE]` (`backend/docs/directory-listing-anthropic.md`).
+- [ ] Guest AI notice: merge and deploy frontend branch `directory-review-2026-10` (invite page + guest intake panel, 21 locales) before replying to Anthropic.
+- [ ] Publish the privacy-policy update (draft: `backend/docs/privacy-policy-ai-draft.md`).
 - [ ] Update the directory form: one-liner, plugin commands/skills, twelve tools, case-agent disclosure; untick or keep "server contains no instructions aimed at the assistant" (true after deploy).
 - [ ] Send the reply (`backend/docs/anthropic-reply-draft.md`) and request re-review.
 
