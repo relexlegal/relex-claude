@@ -30,7 +30,7 @@ client PII to the model**. This document describes the security posture of the
   would return party or document plaintext (party reads/writes,
   document/attachment content, uploads) and instead returns a deep link so you
   complete that step securely in the browser.
-- Claude works only with de-identified labels (e.g. `[Party 1]`) and anonymized
+- Claude works only with de-identified labels (e.g. `[PARTY_NAME_1]`) and anonymized
   counts. Your know-how is searched through a private, per-tenant index — never
   copied to a model and never used for training.
 
