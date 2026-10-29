@@ -19,7 +19,7 @@ applied by the tool and return a Relex deep link where the user confirms the
 change.
 
 ## Done in this branch
-- [x] Plugin 0.2.15 (`plugin/.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`): description says "legal practice management" and names the thirteen tools.
+- [x] Plugin 0.2.16 (`plugin/.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`): description says "legal practice management" and names the thirteen tools.
 - [x] Skills carry the workflow guidance the server no longer sends (`skills/relex/SKILL.md` "Connector workflow"; `skills/relex-steering/SKILL.md` documents the data-only `steering` fields).
 - [x] Skills reference only endpoints that exist in the published OpenAPI spec (audit: 0 unknown references).
 - [x] README, SECURITY, docs: thirteen tools; reading default corrected (Relex Private Model on Relex servers by default).

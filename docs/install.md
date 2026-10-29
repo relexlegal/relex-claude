@@ -29,7 +29,7 @@ clients' names, IDs, and documents stay encrypted in your browser.
    access — there is **no key to paste**. Then it walks you through:
 
    1. **Set your PII password** — encrypts every client name, ID, and document in
-      your browser. Claude only ever sees labels like `[Party 1]`. (Save your
+      your browser. Claude only ever sees labels like `[PARTY_NAME_1]`. (Save your
       recovery key.)
    2. **Add your know-how** — upload your playbooks, templates, and past matters.
       Relex indexes them privately.
@@ -97,6 +97,6 @@ OAuth connection also ends its sign-in session) or unpair clients in
   it on your device); the connector only returns redacted source text.
 - The API additionally refuses any call that would return party or document
   plaintext and hands back a browser deep link instead. Claude works with
-  de-identified labels (`[Party 1]`) and anonymized counts.
+  de-identified labels (`[PARTY_NAME_1]`) and anonymized counts.
 - Your know-how is searched through a private, per-tenant index — never copied to
   a model and never used for training.
