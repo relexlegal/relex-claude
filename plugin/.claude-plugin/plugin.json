@@ -1,8 +1,8 @@
 {
   "name": "relex-legal",
   "displayName": "Relex Legal",
-  "version": "0.2.16",
-  "description": "Relex legal practice management for Claude: work on your Relex matters over a PII-safe MCP connector (thirteen tools: ten matter tools plus search, read_api and execute). Party identities are sealed with a key only the user holds, documents are read and redacted by the Relex Private Model, and the assistant works with de-identified labels.",
+  "version": "0.2.17",
+  "description": "Relex legal practice management for Claude: work across your Relex workspace (matters, know-how, research, ontology, agreements, intake, e-signature, invoices and payment status) over a PII-safe MCP connector (thirteen tools: ten matter tools plus search, read_api and execute). Party identities are sealed with a key only the user holds, documents are read and redacted by the Relex Private Model, and the assistant works with de-identified labels.",
   "author": {
     "name": "Relex"
   },
